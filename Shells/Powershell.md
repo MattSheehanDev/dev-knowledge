@@ -1,10 +1,11 @@
-### Overview
+Powershell
+=================
 
 Since PowerShell 6, Powershell has been open-source and cross-platform built on .NET Core ([[Dotnet]]).
 Previous versions of Powershell are referred to as Windows Powershell now.
 
-### Setup
-
+Setup
+--------------------------------------
 Install Powershell (via [[Homebrew]])
 - Installed to `/usr/local/microsoft/powershell/7`
 ```
@@ -34,7 +35,15 @@ Optionally, make Powershell your default user shell
 chsh -s /usr/local/bin/pwsh
 ```
 
-### Configuration
+### Change Execution Policy
+The default execution policy on Windows machines is to Restricted.
+- This means that `.ps1` scripts and profiles will not run until you change the execution policy.
+```
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+```
+
+Configuration
+----------------------------------------------
 - macOS
 	- Local user (host) profile is located at `~/.config/powershell/Microsoft.PowerShell_profile.ps1`
 - Windows
