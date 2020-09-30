@@ -8,8 +8,8 @@ brew search emacs-plus				# search for formula first
 brew tap d12frosted/emacs-plus		# otherwise add tap
 
 # install emacs
-brew install emacs-plus
-brew linkapps emacs-plus
+brew install emacs-plus@27
+brew linkapps emacs-plus@27
 ```
 
 Follow the rest of the instructions
