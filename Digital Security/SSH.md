@@ -1,6 +1,9 @@
+SSH
+===============================
 #macOS
 
-Keys are by default located at ~/.ssh/
+- Keys are by default located at ~/.ssh/
+- It is my personal practice to have multiple public auth keys, one for each remote origin. This way if my private key pair is compromised, not all other remote origins will be at risk, and I can easily revoke a key pair if needed.
 
 ### Generate an SSH Key
 - RSA SSH key
