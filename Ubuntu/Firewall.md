@@ -3,6 +3,8 @@ Firewall
 
 UFW
 ---------------------------
+- Uncomplicated Firewall
+
 Enable firewall
 ```
 ufw enable
@@ -44,4 +46,15 @@ LIst rules when firewall is disabled
 ```
 ufw show added
 ```
+
+### Standard Ports
+- OpenSSH:
+    - TCP: 22
+- AFP Server (NetaTalk):
+    - TCP: 548
+- Minecraft (Java Edition):
+    - TCP: 25565
+- Samba:
+    - TCP: 139, 445
+    - UDP: 137, 138
 
