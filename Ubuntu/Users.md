@@ -29,3 +29,9 @@ sudo deluser --remove-home newuser
 # remove from sudoers (visudo)
 ```
 
+Change password
+- defaults to the current logged in user, but root privileges can change any users password.
+```
+passwd [?:user]
+```
+
