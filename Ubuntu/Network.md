@@ -15,6 +15,11 @@ Always mount on startup, edit `/etc/fstab` and add the path directories to the f
 /dev/sda1 /mnt/hdd auto defaults,user 0 1
 ```
 
+### Unmount Drive
+```
+sudo umount /dev/sda1
+```
+
 Share Drives
 -----------------------------
 
