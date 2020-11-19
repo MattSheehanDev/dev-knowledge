@@ -1,6 +1,9 @@
+SSH
+===============================
 #macOS
 
-Keys are by default located at ~/.ssh/
+- Keys are by default located at ~/.ssh/
+- It is my personal practice to have multiple public auth keys, one for each remote origin. This way if my private key pair is compromised, not all other remote origins will be at risk, and I can easily revoke a key pair if needed.
 
 ### Generate an SSH Key
 - RSA SSH key
@@ -15,8 +18,15 @@ ssh-keygen -t rsa -b 2048 -C “email@hostname” -f ~/.ssh/[private-key]
 ssh-keygen -t ed25519 -C “email@hostname” -f ~/.ssh/[private-key]
 ```
 
+### Copy SSH Public Key to Server
+
+- Adds the public auth key to the server's `~/.ssh/authorized_keys` for that user.
+```
+ssh-copy-id -i private-key-name user@hostname
+```
+
 ### SSH Config
-- Update SSH config
+- Update SSH `config`
 	-	This lets you have different keys for different sites
 ```
 Host ssh.dev.azure.com
@@ -31,6 +41,21 @@ IdentitiesOnly yes
 ```
 ssh-add -K ~/.ssh/[private-key]
 ```
+
+### SSHD Config
+Edit `/etc/ssh/sshd_config`
+
+#### PermitRootLogin
+- Options: `yes`, `no`, `without-password` (public key auth).
+```
+PermitRootLogin without-password
+```
+
+#### PasswordAuthentication
+```
+PasswordAuthentication no
+```
+
 
 ### Read an SSH Key
 - Check an ssh key on your machine against a known fingerprint
@@ -48,6 +73,9 @@ ssh-keygen -l -E md5 -f ~/.ssh/id_rsa.pub
 ssh-keygen -l -f ~/.ssh/known_hosts
 ```
 
-
+### Restart SSH Service
+```
+sudo systemctl reboot sshd.service
+```
 
 

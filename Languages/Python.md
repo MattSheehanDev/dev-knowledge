@@ -59,6 +59,13 @@ Pip and pipenv
 
 - pipenv is a virtual environment tool to make working with different python versions and different package dependencies easier.
 
+### Pip commands
+List installed packages
+- `--user` will list packages installed to the user profile instead of globally installed packages.
+```
+pip list [--user]
+```
+
 ### Install pipenv
 
 1. Via pip (preferred)
