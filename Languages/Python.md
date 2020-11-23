@@ -98,11 +98,46 @@ pipenv shell
 ```
 
 
+Conda
+---------------------------------
 
+### Conda commands
 
+Update conda
+- `-n` set the environment
+- `-c` sets the package channel
+```
+conda update -n base -c defaults conda
+```
 
+Add channel
+```
+conda config --add channels <channel_name>
+```
 
+Create a new environment
+```
+conda create -n <name_of_my_env>
+```
 
+Create an environment from an environment.yml
+```
+conda env create -f environment.yml
+```
 
+Update an environment from an environment.yml
+```
+conda env update --prefix ./env --file environment.yml  --prune
+```
+
+Activate an environment
+```
+conda activate name_of_my_env
+```
+
+Deactivate an environment
+```
+conda deactivate
+```
 
 
