@@ -1,4 +1,8 @@
-### Setup
+Dotnet
+======================
+
+Setup
+-----------------------------------------
 
 Install SDK
 ```
@@ -10,4 +14,21 @@ The Dotnet versioning can seem a little weird sometimes.
 - If you are not using Visual Studio, use the latest SDK version.
 
 
+Dotnet CLI
+------------------------------------------------
+
+Create a new sln file
+```
+dotnet new sln -n <solution-name>
+```
+
+Create a new console project dir
+```
+dotnet new console -n <project-name>
+```
+
+Add a project to a sln file
+```
+dotnet sln <solution-file.sln> add <project-path.csproj>
+```
 
