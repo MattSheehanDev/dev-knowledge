@@ -32,3 +32,8 @@ Add a project to a sln file
 dotnet sln <solution-file.sln> add <project-path.csproj>
 ```
 
+Remove a project from a sln file
+```
+dotnet sln <solution-file.sln> remove <project-path.csproj>
+```
+
