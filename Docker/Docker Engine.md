@@ -1,8 +1,15 @@
-Docker
+Docker Engine
 =========================
 
-CLI
+Commands
 ----------------------------------------------
+
+Run a container from an image
+```
+docker run <registry/image>
+```
+- `-v` : mount a volume to local file system. Ex. `-v /local:/container`
+- `-p` : expose port. Ex. `-p 80:80`
 
 Start a container
 ```
