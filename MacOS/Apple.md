@@ -1,3 +1,17 @@
+Apple
+============================
+
+Startup Disk Volume
+------------------------------------------------------
+
+### Select startup boot volume
+1. On bootup, hold the **Option ⌥** key.
+2. Select the volume to boot from.
+
+### Select default startup boot volume
+1. Go to *System Preferences* -> *Startup Disk*
+2. Select the startup volume.
+
 
 ### Spotlight
 Turn spotlight off/on for a directory
