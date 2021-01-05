@@ -13,6 +13,18 @@ Startup Disk Volume
 2. Select the startup volume.
 
 
+Install macOS version on an APFS volume
+-------------------------------------------------------
+APFS -- Apple File System
+
+1. Add an APFS Volume, https://support.apple.com/en-us/HT208891
+2. Create a bootable installer, https://support.apple.com/en-us/HT201372
+3. Reboot, hold the **Option ⌥** key and choose the bootable installer USB drive.
+
+
+Processes
+--------------------------------------------------------
+
 ### Spotlight
 Turn spotlight off/on for a directory
 - `/` is the root hdd path
