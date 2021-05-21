@@ -40,3 +40,8 @@ SELECT DP1.name AS DatabaseRoleName,
 WHERE DP1.type = 'R'
 ORDER BY DP1.name;
 ```
+
+Change Contained DB User password
+```
+ALTER USER [user_name] WITH PASSWORD = 'new_password_str'
+```

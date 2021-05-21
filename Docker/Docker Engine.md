@@ -4,12 +4,45 @@ Docker Engine
 Commands
 ----------------------------------------------
 
+## **Images**
+
+Build an image with name:tag
+```
+docker build -t <name:tag>
+```
+
+Build an image with a specific dockerfile
+```
+docker build -f <path-to-dockerfile>
+```
+
+List images
+- hides intermediatary images
+```
+docker image ls
+```
+
+List all images
+```
+docker image ls -a
+```
+
+Remove an image
+- can't remove an image used currently by a container
+```
+docker rmi <image-id>
+```
+
 Run a container from an image
 ```
 docker run <registry/image>
 ```
 - `-v` : mount a volume to local file system. Ex. `-v /local:/container`
 - `-p` : expose port. Ex. `-p 80:80`
+- `--name <container-name>` : alias name for the image (very useful imo)
+- `--rm` : remove container when it exits (very useful imo)
+
+## **Containers**
 
 Start a container
 ```
@@ -29,27 +62,31 @@ docker container ls
 docker ps
 ```
 
-LIst all containers
+List all containers
 ```
+docker container ls --all
+
+# alias
 docker ps -a
 ```
 
 Remove a container
 - `-f` force removal
 ```
-docker rm -f <container-name>
+docker rm -f <container-name|container-id>
 ```
 
-List images
-- hides intermediatary images
+## **System**
+
+Remove dangling resources
+- dangling resources are resources not associated with a container
+- `-a` : remove all unused resources, not just dangling ones
+- `--volumes` : remove resources including volumes
 ```
-docker image ls
+docker system prun
 ```
 
-List all images
-```
-docker image ls -a
-```
+
 
 ![[types-of-mounts-volume.png]]
 
