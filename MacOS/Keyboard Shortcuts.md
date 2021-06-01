@@ -26,18 +26,6 @@ Open emoji and symbol popup where cursor is
 Cmd + Ctrl + Space
 ```
 
-### Finder
-
-Open "Go to folder"
-```
-Cmd + Shift + G
-```
-
-Toggle hidden files in finder
-```
-Cmd + Shift + .
-```
-
 ### Screenshot
 
 Take a screen shot of the entire screen

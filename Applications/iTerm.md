@@ -1,3 +1,6 @@
+iTerm
+=======================================
+
 ### Install
 ```
 brew cask install iterm2

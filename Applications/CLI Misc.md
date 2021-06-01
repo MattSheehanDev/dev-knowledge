@@ -1,4 +1,5 @@
 **Tree**
+
 Install
 ```
 brew install tree
@@ -11,3 +12,9 @@ tree
 tree -L 1
 ```
 
+**Line Numbers**
+
+Quickly add line numbers to the output
+```
+<prev-cmd> | nl
+```

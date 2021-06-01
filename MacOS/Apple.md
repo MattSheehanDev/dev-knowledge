@@ -48,4 +48,3 @@ Restart Dock process
 ```
 killall Dock
 ```
-
