@@ -1,18 +1,7 @@
-Table Metadata
+Table Storage
 =========================
 
-List all database tables
-```
-SELECT
-    schema_name(t.schema_id) as schema_name,
-    t.name as table_name,
-    t.create_date,
-    t.modify_date
-FROM sys.tables t
-ORDER BY schema_name, table_name;
-```
-
-Table storage space
+1. Table storage space
 ```
 -- Multiply UnusedSpaceKB by 8 because a page in sqlserver is eight KB's
 --

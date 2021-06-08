@@ -1,12 +1,24 @@
 Azure SQL Server
 ===============================
 
-Query elastic pool(s) info
+
+Query all databases on server
+```
+USE master
+
+select * FROM sys.databases
+```
+
+
+Elastic Pools
+----------------------------------------------------
+
+1. Query elastic pool(s) info
 ```
 SELECT * FROM sys.database_service_objectives
 ```
 
-Get all elastic pools for a server
+2. Get all elastic pools for a server
 ```
 USE master
 
@@ -15,7 +27,7 @@ SELECT DISTINCT
 FROM sys.elastic_pool_resource_stats
 ```
 
-Query database and elastic pool(s) info
+3. Query database and elastic pool(s) info
 ```
 SELECT
     @@SERVERNAME as [ServerName],
@@ -30,7 +42,7 @@ ORDER BY
     d.name, dso.elastic_pool_name
 ```
 
-Get elastic pool storage space used and max storage space available
+4. Get elastic pool storage space used and max storage space available
 ```
 SELECT TOP 1
     elastic_pool_name,

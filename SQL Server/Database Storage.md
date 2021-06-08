@@ -1,14 +1,7 @@
-Database Metadata
+Database Storage
 ===============================
 
-Query all databases on server
-```
-USE master
-
-select * FROM sys.databases
-```
-
-Query storage space used and max storage space available
+1. Query storage space used and max storage space available
 ```
 SELECT
     DB_NAME() AS DbName,
@@ -21,8 +14,8 @@ FROM sys.database_files
 WHERE type IN (0,1);
 ```
 
-Query table storage size
-- Useful when trying to determine why a database storage space is so large
+1. Query table storage size
+    - Useful when trying to determine why a database storage space is so large
 ```
 SELECT 
     s.Name AS SchemaName,

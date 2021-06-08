@@ -6,7 +6,7 @@ Average fragmentation for each table
 DECLARE @db_id INT = DB_ID(N'name_of_database');
 
 
--- Find avg index fragmentation for single db table
+-- Find avg index fragmentation for all db tables
 SELECT
     DB_NAME(pstats.database_id) as DbName,
     pstats.object_id,
@@ -22,8 +22,7 @@ FROM sys.dm_db_index_physical_stats (@db_id, NULL, NULL, NULL, NULL) AS pstats
 
 INNER JOIN sys.indexes AS idx ON pstats.object_id = idx.object_id AND pstats.index_id = idx.index_id
 
-ORDER BY pstats.avg_fragmentation_in_percent DESC;
-
+ORDER BY pstats.avg_fragmentation_in_percent DESC;\
 ```
 
 Average fragmentation fora  specific table
@@ -50,7 +49,6 @@ FROM sys.dm_db_index_physical_stats (@db_id, @table_id, NULL, NULL, NULL) AS pst
 INNER JOIN sys.indexes AS idx ON pstats.object_id = idx.object_id AND pstats.index_id = idx.index_id
 
 ORDER BY pstats.avg_fragmentation_in_percent DESC;
-
 ```
 
 Re-organize all indexes on a table
