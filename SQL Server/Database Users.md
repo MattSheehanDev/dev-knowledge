@@ -1,7 +1,7 @@
 Database Users
 ========================
 
-Query DB Users
+1. Query DB Users
 ```
 -- Principal types
 -- A = Application role
@@ -28,7 +28,7 @@ where
 order by username;
 ```
 
-Query list of Roles and Users
+2.  Query list of Roles and Users
 ```
 SELECT DP1.name AS DatabaseRoleName,   
    isnull (DP2.name, 'No members') AS DatabaseUserName   
@@ -41,7 +41,7 @@ WHERE DP1.type = 'R'
 ORDER BY DP1.name;
 ```
 
-Change Contained DB User password
+3. Change Contained DB User password
 ```
 ALTER USER [user_name] WITH PASSWORD = 'new_password_str'
 ```
