@@ -1,4 +1,7 @@
-### Setup
+Git
+==========================================
+Setup
+--------------------------
 
 Install Git (via [[Homebrew]])
 ```
@@ -10,7 +13,8 @@ brew update
 brew upgrade git
 ```
 
-### Configuration
+Configuration
+----------------------------
 Your user configuration file is located in your home directory, `~/.gitconfig`. At a minimum, configure your user name and email.
 - The following commands edit your user configuration.
 - Leaving out the `--global` will modify the local `.git` directory configuration.
@@ -20,7 +24,8 @@ git config --global user.name "Your Name Here"
 git config --global user.email your@email.com
 ```
 
-### Commands
+Commands
+--------------------------------
 
 Initialize a new Repo
 ```
@@ -123,7 +128,13 @@ View last log
 git log -n 1
 ```
 
-### Github
+Delete untracked files
+- `-n` does a dry-run to see what would be removed.
+```
+git clean -x
+```
+
+## Github
 - HTTPS
 	- On macOS, your GitHub password might be stored in the Keychain Access App.
     - If you change your password on GitHub, open the App and search for GitHub. Delete the entry and the next time you push/pull/clone from GitHub, you will be prompted for your username and password.
