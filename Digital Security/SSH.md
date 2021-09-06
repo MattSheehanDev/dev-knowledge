@@ -2,7 +2,7 @@ SSH
 ===============================
 #macOS
 
-- Keys are by default located at ~/.ssh/
+- Keys are by default located at `~/.ssh/` (`$HOME/.ssh/` for Windows)
 - It is my personal practice to have multiple public auth keys, one for each remote origin. This way if my private key pair is compromised, not all other remote origins will be at risk, and I can easily revoke a key pair if needed.
 
 ### Generate an SSH Key
@@ -26,7 +26,7 @@ ssh-copy-id -i private-key-name user@hostname
 ```
 
 ### SSH Config
-- Update SSH `config`
+- Update SSH `config` (`~/.ssh/config`)
 	-	This lets you have different keys for different sites
 ```
 Host ssh.dev.azure.com
