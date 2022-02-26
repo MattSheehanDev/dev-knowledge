@@ -29,6 +29,19 @@ List resources in a Resource Group
 az resource list -g <resource-group>
 ```
 
+### Containers
+
+Stream container instance logs
+```
+az container logs -g <resource-group> -n <container-instance-name>
+```
+
+Attach to a container instance and stream stdout and stderr.
+Similar to logs except refreshes with new logs.
+```
+az container attach -g <resource-group> -n <container-instance-name>
+```
+
 Recipes
 ------------------------
 SSH into an Azure virtual machine

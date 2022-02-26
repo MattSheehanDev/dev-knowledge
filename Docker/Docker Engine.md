@@ -4,16 +4,21 @@ Docker Engine
 Commands
 ----------------------------------------------
 
-## **Images**
+### Images
 
 Build an image with name:tag
 ```
-docker build -t <name:tag>
+docker build -t <name:tag> .
 ```
 
 Build an image with a specific dockerfile
 ```
-docker build -f <path-to-dockerfile>
+docker build -f <path-to-dockerfile> .
+```
+
+Tag an image
+```
+docker tag <image-name> <image-name>[:tag]
 ```
 
 List images
@@ -25,6 +30,17 @@ docker image ls
 List all images
 ```
 docker image ls -a
+```
+
+Run an image (creates a container)
+```
+docker run <image-name>
+
+# Run an image and give a container name
+docker run <image-name> --name <container-name>
+
+# Run an image and remove container when it stops
+docker run --rm <image-name>
 ```
 
 Remove an image
@@ -42,7 +58,7 @@ docker run <registry/image>
 - `--name <container-name>` : alias name for the image (very useful imo)
 - `--rm` : remove container when it exits (very useful imo)
 
-## **Containers**
+### Containers
 
 Start a container
 ```
@@ -73,17 +89,37 @@ docker ps -a
 Remove a container
 - `-f` force removal
 ```
+docker rm <container-name|container-id>
+
 docker rm -f <container-name|container-id>
 ```
 
-## **System**
+### Registries
+
+Login
+```
+docker login <registry-url>
+```
+
+Push
+```
+docker push <image-name|image-tag>
+```
+
+### System
 
 Remove dangling resources
 - dangling resources are resources not associated with a container
 - `-a` : remove all unused resources, not just dangling ones
 - `--volumes` : remove resources including volumes
 ```
-docker system prun
+docker system prune
+
+# Remove all unused resources (not just dangling)
+docker system prune -a
+
+# Remove all unused resources, including volumes
+docker system prune -a --volumes
 ```
 
 
